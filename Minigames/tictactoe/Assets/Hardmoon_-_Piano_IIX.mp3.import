@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hardmoon_-_Piano_IIX.mp3-dffb1ad98dcc770b341ca690378d982d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Hardmoon_-_Piano_IIX.mp3"
+dest_files=[ "res://.import/Hardmoon_-_Piano_IIX.mp3-dffb1ad98dcc770b341ca690378d982d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

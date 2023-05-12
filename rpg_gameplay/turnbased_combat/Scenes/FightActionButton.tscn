@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/ActionButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/FightActionButton.gd" type="Script" id=2]
+
+[node name="FightActionButton" instance=ExtResource( 1 )]
+text = "FIGHT"
+script = ExtResource( 2 )
+
+[node name="HoverInfo" parent="." index="0"]
+description = "Strike. 1d6 damage"

@@ -1,0 +1,55 @@
+{
+	"glossary": [
+
+	],
+	"variables": [
+		{
+			"id": "1684878156-785",
+			"name": "BName",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684877988-339",
+			"name": "AName",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684875148-918",
+			"name": "counter",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1684878399-192",
+			"name": "choice0",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684878460-416",
+			"name": "answer1",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684878457-250",
+			"name": "answer0",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684878403-574",
+			"name": "choice1",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684878463-953",
+			"name": "question",
+			"type": 0,
+			"value": ""
+		}
+	]
+}

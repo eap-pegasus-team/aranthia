@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1684872351.json",
+	"mirror_portraits": false,
+	"name": "A",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/animal-portraits-sergey-polyushko-5-582b05d084f19__880.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}

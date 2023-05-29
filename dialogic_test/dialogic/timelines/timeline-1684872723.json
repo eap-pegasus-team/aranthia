@@ -1,0 +1,144 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684872351.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684872351.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey there! It's me [AName]! [BName] where are you?"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684872362.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684872362.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hallo [AName]! [BName] has arrived!! !Yes"
+		},
+		{
+			"definition": "1684875148-918",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "Question"
+		},
+		{
+			"character": "character-1684872351.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Για πες [BName], [question]"
+		},
+		{
+			"choice": "[choice0]",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1684872351.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[answer0]"
+		},
+		{
+			"emit_signal": "0",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "[choice1]",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "1",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1684872351.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[answer1]!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"definition": "1684875148-918",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"condition": "<",
+			"definition": "1684875148-918",
+			"event_id": "dialogic_012",
+			"value": "3"
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1684872723.json",
+		"name": "test_timeline"
+	}
+}

@@ -2,34 +2,31 @@ extends Node
 
 var dialog = load("res://Dialog.gd")
 
-var characters = ["FirstCharName", "SecondCharName"]
+var characters = ["character-1684872351.json", "character-1684872362.json"]
 var questions = [
 	dialog.Question.new(
-		"This is the question 1",
-		["Choice number 1", "Choice number 2"],
-		["Correct!", "Wrong!"],
-		[true, false]
+		"Η επιτάχυνση ενός κινητού έχει πάντα κατεύθυνση:",
+		["ίδια με αυτήν της ταχύτητάς του", "ίδια με αυτήν της κίνησής του", "ίδια με αυτήν της συνισταμένης των δυνάμεων που του ασκούνται", "κάθετη προς αυτήν της συνισταμένης των δυνάμεων που του ασκούνται"],
+		["Χμμ, δεν είμαι τόσο σίγουρος", "Μπαα", "Σωστά!", "Δυστυχώς όχι"],
+		[false, false, true, false]
 	),
 	dialog.Question.new(
-		"This is the question 2", 
-		["Choice number 3", "Choice number 4"],
-		["Wrong!", "Correct!"],
-		[false, true]
+		"Η ελεύθερη πτώση ενός σώματος στη Γη",
+		["είναι πάντα ευθύγραμμη κίνηση", "είναι κίνηση κατά την οποία η ταχύτητα του σώματος διατηρείται σταθερή", "είναι κίνηση με επιτάχυνση ίση με τη γήινη βαρυτική", "τίποτα από τα παραπάνω"],
+		["Όχι", "Γκούχου γκούχου", "Σωστά!", "Νιετ"],
+		[false, false, true, false]
 	),
 	dialog.Question.new(
-		"This is the question 3", 
-		["Choice number 5", "Choice number 6"],
-		["Correct!", "Wrong!"],
-		[true, false]
+		"Εξ ορισμού, η αδρανειακή μάζα ενός σώματος μπορεί να υπολογιστεί ως εξής",
+		["τοποθετούμε το σώμα σε ένα ζυγό σύγκρισης και συγκρίνουμε τη μάζα του με γνωστές μάζες", "χρησιμοποιούμε δυναμόμετρο για να μετρήσουμε το βάρος του και στη συνέχεια την υπολογίζουμε", "ασκούμε δύναμη στο σώμα και μετράμε την επιτάχυνση που αποκτά", "μετράμε τον όγκο του σώματος και μέσω της πυκνότητας του βρίσκουμε τη μάζα"],
+		["Γκούχου γκούχου", "Όχι", "Νιετ", "Σωστά!"],
+		[false, false, false, true]
 	)
 ]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Starting the dialog")
-	var a = dialog.new().timeline(questions, characters)
-	add_child(a)
-	var b = dialog.new().timeline(questions, characters)
-	print("Dialog ended... starting 2nd dialog")
-	add_child(b)
-
+	var timeline = dialog.new().trigger_timeline(questions, characters, 1)
+	add_child(timeline)
+	print("Dialog ended")

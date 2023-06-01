@@ -1,6 +1,5 @@
 class_name Dialog extends Object
 
-
 class Question:
 	var question: String
 	var choices_text: Array
@@ -28,10 +27,10 @@ func timeline(questions: Array, character_names: Array) -> Dialog:
 	Dialogic.set_variable("char0", character_names[0])
 	Dialogic.set_variable("char1", character_names[1])
 	Dialogic.set_variable("question", question.question)
-	for i in 2:
+	for i in len(question.choices_text):
 		var name = "choice" + str(i)
 		Dialogic.set_variable(name, question.choices_text[i])
-	for i in 2:
+	for i in len(question.answers_text):
 		var name = "answer" + str(i)
 		Dialogic.set_variable(name, question.answers_text[i])	
 	new_dialog.connect("dialogic_signal", self, "dialogic_signal")

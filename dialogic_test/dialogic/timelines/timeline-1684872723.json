@@ -22,12 +22,6 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1684872351.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hey there! It's me [AName]! [BName] where are you?"
-		},
-		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"animation_wait": true,
@@ -49,33 +43,13 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1684872362.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hallo [AName]! [BName] has arrived!! !Yes"
-		},
-		{
-			"definition": "1684875148-918",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "0"
-		},
-		{
-			"event_id": "dialogic_015",
-			"id": "anchor-1634488067",
-			"index": 0,
-			"name": "Question"
-		},
-		{
 			"character": "character-1684872351.json",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "Για πες [BName], [question]"
+			"question": "[question]"
 		},
 		{
 			"choice": "[choice0]",
@@ -109,28 +83,41 @@
 			"character": "character-1684872351.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[answer1]!"
+			"text": "[answer1]"
 		},
 		{
-			"event_id": "dialogic_013"
+			"choice": "[choice2]",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
-			"definition": "1684875148-918",
-			"event_id": "dialogic_014",
-			"operation": "+",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
+			"emit_signal": "2",
+			"event_id": "dialogic_040"
 		},
 		{
-			"condition": "<",
-			"definition": "1684875148-918",
-			"event_id": "dialogic_012",
-			"value": "3"
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[answer2]"
 		},
 		{
-			"anchor_id": "anchor-1634488067",
-			"event_id": "dialogic_016"
+			"choice": "[choice3]",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "3",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[answer3]"
 		},
 		{
 			"event_id": "dialogic_013"

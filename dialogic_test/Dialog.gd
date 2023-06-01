@@ -1,50 +1,32 @@
-extends Node2D
+class_name Dialog extends Object
 
 
 class Question:
-	var question
-	var choices_text
-	var answers_text
-	var answers
-	
-	func _init(question, choices_text, answers_text, answers):
+	var question: String
+	var choices_text: Array
+	var answers_text: Array
+	var answers: Array
+
+	func _init(question: String, choices_text: Array, answers_text: Array, answers: Array):
 		self.question = question
 		self.choices_text = choices_text
 		self.answers_text = answers_text
 		self.answers = answers
 
-var questions = [
-	Question.new(
-		"This is the question 1", 
-		["Choice number 1", "Choice number 2"],
-		["Correct!", "Wrong!"],
-		[true, false]
-	),
-	Question.new(
-		"This is the question 2", 
-		["Choice number 3", "Choice number 4"],
-		["Correct!", "Wrong!"],
-		[false, true]
-	),
-	Question.new(
-		"This is the question 3", 
-		["Choice number 5", "Choice number 6"],
-		["Correct!", "Wrong!"],
-		[false, true]
-	)
-]
-
-var random_index = randi() % 3
+var global_questions
+var random_index
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func timeline(questions: Array, character_names: Array) -> Dialog:
+	global_questions = questions
+	random_index = randi() % len(questions)
 	randomize()
 	print("Ready method runs")
 	print("Random index: " + str(random_index))
 	var question = questions[random_index]
 	var new_dialog = Dialogic.start("test_timeline")
-	Dialogic.set_variable("AName", "Vasilis")
-	Dialogic.set_variable("BName", "Silisav")
+	Dialogic.set_variable("char0", character_names[0])
+	Dialogic.set_variable("char1", character_names[1])
 	Dialogic.set_variable("question", question.question)
 	for i in 2:
 		var name = "choice" + str(i)
@@ -52,11 +34,11 @@ func _ready():
 	for i in 2:
 		var name = "answer" + str(i)
 		Dialogic.set_variable(name, question.answers_text[i])	
-	add_child(new_dialog)
 	new_dialog.connect("dialogic_signal", self, "dialogic_signal")
+	return new_dialog
 
 
 func dialogic_signal(argument):
 	print("Dialogic signal called with argument: " + argument)
 	var idx = int(argument)
-	print("Your answer was: " + str(questions[random_index].answers[idx]))
+	print("Your answer was: " + str(global_questions[random_index].answers[idx]))

@@ -4,14 +4,14 @@
 	],
 	"variables": [
 		{
-			"id": "1684878156-785",
-			"name": "BName",
+			"id": "1684878399-192",
+			"name": "choice0",
 			"type": 0,
 			"value": ""
 		},
 		{
-			"id": "1684877988-339",
-			"name": "AName",
+			"id": "1684878463-953",
+			"name": "question",
 			"type": 0,
 			"value": ""
 		},
@@ -22,8 +22,20 @@
 			"value": "0"
 		},
 		{
-			"id": "1684878399-192",
-			"name": "choice0",
+			"id": "1685625745-787",
+			"name": "choice3",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1685625754-366",
+			"name": "answer2",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1685625759-146",
+			"name": "answer3",
 			"type": 0,
 			"value": ""
 		},
@@ -34,20 +46,32 @@
 			"value": ""
 		},
 		{
-			"id": "1684878457-250",
-			"name": "answer0",
-			"type": 0,
-			"value": ""
-		},
-		{
 			"id": "1684878403-574",
 			"name": "choice1",
 			"type": 0,
 			"value": ""
 		},
 		{
-			"id": "1684878463-953",
-			"name": "question",
+			"id": "1684878457-250",
+			"name": "answer0",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1685625740-648",
+			"name": "choice2",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684878156-785",
+			"name": "char1",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1684877988-339",
+			"name": "char0",
 			"type": 0,
 			"value": ""
 		}

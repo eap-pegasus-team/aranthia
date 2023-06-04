@@ -13,14 +13,15 @@ class Question:
 		self.answers = answers
 
 var global_questions
-var random_index
+var global_question_idx = 0
 
 func trigger_timeline(questions: Array, characters: Array, number_of_questions: int) -> Dialog:
 	questions.shuffle()
+	global_questions = questions
 	var timeline_events: Array = []
 	for i in number_of_questions:
 		timeline_events.append(create_timeline(questions[i], characters))
-	var timeline = Dialogic.start("")
+	var timeline = Dialogic.start()
 	timeline.dialog_node.dialog_script = {
 		"events": [
 			{
@@ -64,9 +65,8 @@ func trigger_timeline(questions: Array, characters: Array, number_of_questions: 
 				},
 				"type": 0,
 				"z_index": 0
-			},
-			timeline_events
-		]
+			}
+		].append(timeline_events)
 	}
 	timeline.connect("dialogic_signal", self, "dialogic_signal_handler")
 	return timeline
@@ -159,4 +159,5 @@ func create_timeline(question: Question, characters: Array) -> Array:
 func dialogic_signal_handler(argument):
 	print("Dialogic signal called with argument: " + argument)
 	var idx = int(argument)
-	print("Your answer was: " + str(global_questions[random_index].answers[idx]))
+	print("Your answer was: " + str(global_questions[global_question_idx].answers[idx]))
+	global_question_idx = global_question_idx + 1

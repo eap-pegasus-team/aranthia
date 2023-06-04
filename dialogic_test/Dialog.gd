@@ -66,6 +66,7 @@ func trigger_timeline(questions: Array, characters: Array, number_of_questions: 
 				"type": 0,
 				"z_index": 0
 			},
+			# Question #1
 			{
 				"character": characters[0],
 				"event_id": "dialogic_010",
@@ -142,6 +143,330 @@ func trigger_timeline(questions: Array, characters: Array, number_of_questions: 
 				"event_id": "dialogic_001",
 				"portrait": "",
 				"text": questions[0].answers_text[3]
+			},
+			{
+				"event_id": "dialogic_013"
+			},
+			# Question #2
+			{
+				"character": characters[0],
+				"event_id": "dialogic_010",
+				"options": [
+
+				],
+				"portrait": "",
+				"question": questions[1].question
+			},
+			{
+				"choice": questions[1].choices_text[0],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[1].answers_text[0]
+			},
+			{
+				"emit_signal": "0",
+				"event_id": "dialogic_040"
+			},
+			{
+				"choice": questions[1].choices_text[1],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "1",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[1].answers_text[1]
+			},
+			{
+				"choice": questions[1].choices_text[2],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "2",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[1].answers_text[2]
+			},
+			{
+				"choice": questions[1].choices_text[3],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "3",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[1].answers_text[3]
+			},
+			{
+				"event_id": "dialogic_013"
+			},
+			# Question #3
+			{
+				"character": characters[0],
+				"event_id": "dialogic_010",
+				"options": [
+
+				],
+				"portrait": "",
+				"question": questions[2].question
+			},
+			{
+				"choice": questions[2].choices_text[0],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[2].answers_text[0]
+			},
+			{
+				"emit_signal": "0",
+				"event_id": "dialogic_040"
+			},
+			{
+				"choice": questions[2].choices_text[1],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "1",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[2].answers_text[1]
+			},
+			{
+				"choice": questions[2].choices_text[2],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "2",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[2].answers_text[2]
+			},
+			{
+				"choice": questions[2].choices_text[3],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "3",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[2].answers_text[3]
+			},
+			{
+				"event_id": "dialogic_013"
+			},
+			# Question #4
+			{
+				"character": characters[0],
+				"event_id": "dialogic_010",
+				"options": [
+
+				],
+				"portrait": "",
+				"question": questions[3].question
+			},
+			{
+				"choice": questions[3].choices_text[0],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[3].answers_text[0]
+			},
+			{
+				"emit_signal": "0",
+				"event_id": "dialogic_040"
+			},
+			{
+				"choice": questions[3].choices_text[1],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "1",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[3].answers_text[1]
+			},
+			{
+				"choice": questions[3].choices_text[2],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "2",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[3].answers_text[2]
+			},
+			{
+				"choice": questions[3].choices_text[3],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "3",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[3].answers_text[3]
+			},
+			{
+				"event_id": "dialogic_013"
+			},
+			# Question #5
+			{
+				"character": characters[0],
+				"event_id": "dialogic_010",
+				"options": [
+
+				],
+				"portrait": "",
+				"question": questions[4].question
+			},
+			{
+				"choice": questions[4].choices_text[0],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[4].answers_text[0]
+			},
+			{
+				"emit_signal": "0",
+				"event_id": "dialogic_040"
+			},
+			{
+				"choice": questions[4].choices_text[1],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "1",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[4].answers_text[1]
+			},
+			{
+				"choice": questions[4].choices_text[2],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "2",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[4].answers_text[2]
+			},
+			{
+				"choice": questions[4].choices_text[3],
+				"condition": "",
+				"definition": "",
+				"event_id": "dialogic_011",
+				"value": ""
+			},
+			{
+				"emit_signal": "3",
+				"event_id": "dialogic_040"
+			},
+			{
+				"character": characters[1],
+				"event_id": "dialogic_001",
+				"portrait": "",
+				"text": questions[4].answers_text[3]
 			},
 			{
 				"event_id": "dialogic_013"

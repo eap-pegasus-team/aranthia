@@ -57,6 +57,6 @@ var questions = [
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Starting the dialog")
-	var timeline = dialog.new().trigger_timeline(questions, characters, 1)
+	var timeline = dialog.new().create_timeline(questions, characters)
 	add_child(timeline)
 	print("Dialog ended")

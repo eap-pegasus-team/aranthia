@@ -15,12 +15,10 @@ class Question:
 var global_questions
 var global_question_idx = 0
 
-func trigger_timeline(questions: Array, characters: Array, number_of_questions: int) -> Dialog:
+func create_timeline(questions: Array, characters: Array) -> Dialog:
+	randomize()
 	questions.shuffle()
 	global_questions = questions
-	# var timeline_events: Array = []
-	# for i in number_of_questions:
-	# 	timeline_events.append(create_timeline(questions[i], characters))
 	var timeline = Dialogic.start()
 	timeline.dialog_node.dialog_script = {
 		"events": [

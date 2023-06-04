@@ -18,9 +18,9 @@ var global_question_idx = 0
 func trigger_timeline(questions: Array, characters: Array, number_of_questions: int) -> Dialog:
 	questions.shuffle()
 	global_questions = questions
-	var timeline_events: Array = []
-	for i in number_of_questions:
-		timeline_events.append(create_timeline(questions[i], characters))
+	# var timeline_events: Array = []
+	# for i in number_of_questions:
+	# 	timeline_events.append(create_timeline(questions[i], characters))
 	var timeline = Dialogic.start()
 	timeline.dialog_node.dialog_script = {
 		"events": [
@@ -65,14 +65,7 @@ func trigger_timeline(questions: Array, characters: Array, number_of_questions: 
 				},
 				"type": 0,
 				"z_index": 0
-			}
-		].append(timeline_events)
-	}
-	timeline.connect("dialogic_signal", self, "dialogic_signal_handler")
-	return timeline
-
-func create_timeline(question: Question, characters: Array) -> Array:
-	return [
+			},
 			{
 				"character": characters[0],
 				"event_id": "dialogic_010",
@@ -80,10 +73,10 @@ func create_timeline(question: Question, characters: Array) -> Array:
 
 				],
 				"portrait": "",
-				"question": question.question
+				"question": questions[0].question
 			},
 			{
-				"choice": question.choices_text[0],
+				"choice": questions[0].choices_text[0],
 				"condition": "",
 				"definition": "",
 				"event_id": "dialogic_011",
@@ -93,14 +86,14 @@ func create_timeline(question: Question, characters: Array) -> Array:
 				"character": characters[1],
 				"event_id": "dialogic_001",
 				"portrait": "",
-				"text": question.answers_text[0]
+				"text": questions[0].answers_text[0]
 			},
 			{
 				"emit_signal": "0",
 				"event_id": "dialogic_040"
 			},
 			{
-				"choice": question.choices_text[1],
+				"choice": questions[0].choices_text[1],
 				"condition": "",
 				"definition": "",
 				"event_id": "dialogic_011",
@@ -114,10 +107,10 @@ func create_timeline(question: Question, characters: Array) -> Array:
 				"character": characters[1],
 				"event_id": "dialogic_001",
 				"portrait": "",
-				"text": question.answers_text[1]
+				"text": questions[0].answers_text[1]
 			},
 			{
-				"choice": question.choices_text[2],
+				"choice": questions[0].choices_text[2],
 				"condition": "",
 				"definition": "",
 				"event_id": "dialogic_011",
@@ -131,10 +124,10 @@ func create_timeline(question: Question, characters: Array) -> Array:
 				"character": characters[1],
 				"event_id": "dialogic_001",
 				"portrait": "",
-				"text": question.answers_text[2]
+				"text": questions[0].answers_text[2]
 			},
 			{
-				"choice": question.choices_text[3],
+				"choice": questions[0].choices_text[3],
 				"condition": "",
 				"definition": "",
 				"event_id": "dialogic_011",
@@ -148,12 +141,15 @@ func create_timeline(question: Question, characters: Array) -> Array:
 				"character": characters[1],
 				"event_id": "dialogic_001",
 				"portrait": "",
-				"text": question.answers_text[3]
+				"text": questions[0].answers_text[3]
 			},
 			{
 				"event_id": "dialogic_013"
 			}
 		]
+	}
+	timeline.connect("dialogic_signal", self, "dialogic_signal_handler")
+	return timeline
 
 
 func dialogic_signal_handler(argument):

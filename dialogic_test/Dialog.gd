@@ -14,8 +14,10 @@ class Question:
 
 var global_questions
 var global_question_idx = 0
+var global_answer_handler
 
-func create_timeline(questions: Array, characters: Array) -> Dialog:
+func create_timeline(questions: Array, characters: Array, answer_handler: FuncRef) -> Dialog:
+	global_answer_handler = answer_handler
 	randomize()
 	questions.shuffle()
 	global_questions = questions
@@ -478,5 +480,7 @@ func create_timeline(questions: Array, characters: Array) -> Dialog:
 func dialogic_signal_handler(argument):
 	print("Dialogic signal called with argument: " + argument)
 	var idx = int(argument)
-	print("Your answer was: " + str(global_questions[global_question_idx].answers[idx]))
+	var answer = global_questions[global_question_idx].answers[idx]
+	print("Your answer was: " + str(answer))
+	global_answer_handler.call_func(idx, answer)
 	global_question_idx = global_question_idx + 1

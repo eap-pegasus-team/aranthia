@@ -39,7 +39,7 @@ var questions = [
 		["να αντιτίθεται στην ολίσθηση του σώματος", "να αντιτίθεται στην κίνηση του σώματος", "να αντιτίθεται στην κίνηση και στην ολίσθηση του σώματος", "να βοηθά την κίνηση του σώματος"],
 		["Σωστά!", "Γκούχου γκούχου", "Όχι", "Νιετ"],
 		[true, false, false, false]
-	),	
+	),
 	dialog.Question.new(
 		"Αν η συνισταμένη των δυνάμεων που ασκούνται σε ένα σώμα είναι μηδέν, τότε το σώμα",
 		["παραμένει πάντα ακίνητο", "κινείται ευθύγραμμα και επιβραδύνεται μέχρι να ακινητοποι4ηθεί", "κινείται ευθύγραμμα και ομαλά ή ηρεμεί", "κινείται ευθύγραμμα ομαλά επιταχυνόμενα"],
@@ -54,9 +54,13 @@ var questions = [
 	)
 ]
 
+func _answers_handler(answer_idx: int, answer: bool):
+	print("answer_num is: " + str(answer_idx) + ", answer is: " + str(answer))
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Starting the dialog")
-	var timeline = dialog.new().create_timeline(questions, characters)
+	var ref = funcref(self, "_answers_handler")
+	var timeline = dialog.new().create_timeline(questions, characters, ref)
 	add_child(timeline)
 	print("Dialog ended")

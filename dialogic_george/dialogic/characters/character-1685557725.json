@@ -1,0 +1,21 @@
+{
+	"color": "#ff8b1111",
+	"description": "Professor of Evocation Class",
+	"display_name": "Prof. Fireheart",
+	"display_name_bool": true,
+	"id": "character-1685557725.json",
+	"mirror_portraits": false,
+	"name": "Evocation Teacher",
+	"nickname": "Professor Ignatius Fireheart",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://pics/ignatius.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}

@@ -15,6 +15,7 @@ class Question:
 var global_questions
 var global_question_idx = 0
 var global_answer_handler
+var count_true = 0
 
 func create_timeline(questions: Array, characters: Array, answer_handler: FuncRef) -> Dialog:
 	global_answer_handler = answer_handler
@@ -484,3 +485,10 @@ func dialogic_signal_handler(argument):
 	print("Your answer was: " + str(answer))
 	global_answer_handler.call_func(idx, answer)
 	global_question_idx = global_question_idx + 1
+	
+	if answer == true:
+		count_true = count_true + 1
+	print ("Σωστές απαντήσεις: ", count_true)
+	
+	if count_true >=3 and global_question_idx == 5:
+		print("Συγχαρητήρια!!! Πέρασες το μάθημα!!!")

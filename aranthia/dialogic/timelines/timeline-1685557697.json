@@ -47,6 +47,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Ας δούμε αν έχετε αυτό που χρειάζεται..."
+		},
+		{
+			"change_scene": "res://EvocationQuestionsScene.tscn",
+			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {

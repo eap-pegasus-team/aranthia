@@ -47,6 +47,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Δείξτε μου τί ξέρετε."
+		},
+		{
+			"change_scene": "res://TransmutationQuestionsScene.tscn",
+			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {

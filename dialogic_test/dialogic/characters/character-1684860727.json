@@ -1,0 +1,21 @@
+{
+	"color": "#ffffd700",
+	"description": "Professor of Abjuration Class",
+	"display_name": "Prof. Mulberry",
+	"display_name_bool": true,
+	"id": "character-1684860727.json",
+	"mirror_portraits": false,
+	"name": "Abjuration Teacher",
+	"nickname": "Professor Alaistair Mulberry",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://pics/old teacher 1.png"
+		}
+	],
+	"scale": 60,
+	"theme": "default-theme.cfg"
+}

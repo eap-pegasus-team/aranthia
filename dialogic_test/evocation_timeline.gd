@@ -2,7 +2,7 @@ extends Node
 
 var dialog = load("res://Dialog.gd")
 
-var characters = ["character-1684872351.json", "character-1684872362.json"]
+var characters = ["", "character-1685557725.json"]
 var questions = [
 	dialog.Question.new(
 		"Ποια από τα πιο πάνω δεν είναι λειτουργία της Κεντρικής Μονάδας Επεξεργασίας;",

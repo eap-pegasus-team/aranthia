@@ -87,7 +87,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Dialogic test"
-run/main_scene="res://TestScene.tscn"
+run/main_scene="res://AbjurationScene.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

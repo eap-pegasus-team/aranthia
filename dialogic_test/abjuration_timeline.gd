@@ -2,7 +2,7 @@ extends Node
 
 var dialog = load("res://Dialog.gd")
 
-var characters = ["character-1684872351.json", "character-1684872362.json"]
+var characters = ["", "character-1684860727.json"]
 var questions = [
 	dialog.Question.new(
 		"Σε έναν ανθρώπινο οργανισμό:",
@@ -155,6 +155,7 @@ func _answers_handler(answer_idx: int, answer: bool):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Dialogic.change_timeline("timeline-1684860698.json")
 	print("Starting the dialog")
 	var ref = funcref(self, "_answers_handler")
 	var timeline = dialog.new().create_timeline(questions, characters, ref)

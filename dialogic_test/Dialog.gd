@@ -26,6 +26,10 @@ func create_timeline(questions: Array, characters: Array, answer_handler: FuncRe
 	timeline.dialog_node.dialog_script = {
 		"events": [
 			{
+			"background": "res://pics/classroom.png",
+			"event_id": "dialogic_021"
+			},
+			{
 				"animation": "[Default]",
 				"animation_length": 0,
 				"animation_wait": true,

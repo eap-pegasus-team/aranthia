@@ -1,5 +1,5 @@
 extends Node
-
+var player = get_node("PlayerNode").get("player")
 var dialog = load("res://Dialog.gd")
 
 var characters = ["", "character-1684860727.json"]

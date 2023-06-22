@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Magic Town.mp3-706d070df97208fab142ef8695869110.mp3str"
+
+[deps]
+
+source_file="res://Assets/Magic Town.mp3"
+dest_files=[ "res://.import/Magic Town.mp3-706d070df97208fab142ef8695869110.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/defaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/ActionButton.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/HoverInfo.tscn" type="PackedScene" id=3]
+
+[node name="ActionButton" type="Button"]
+margin_right = 4.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 32, 13 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="HoverInfo" parent="." instance=ExtResource( 3 )]
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_Bards_Tale.mp3-de45b184e4c11c185b53bdd564adac04.mp3str"
+
+[deps]
+
+source_file="res://Assets/The_Bards_Tale.mp3"
+dest_files=[ "res://.import/The_Bards_Tale.mp3-de45b184e4c11c185b53bdd564adac04.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

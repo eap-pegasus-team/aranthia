@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_Old_Tower_Inn.mp3-0f0a2c43ff0c8e64ef14b833a4c9927b.mp3str"
+
+[deps]
+
+source_file="res://Assets/The_Old_Tower_Inn.mp3"
+dest_files=[ "res://.import/The_Old_Tower_Inn.mp3-0f0a2c43ff0c8e64ef14b833a4c9927b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

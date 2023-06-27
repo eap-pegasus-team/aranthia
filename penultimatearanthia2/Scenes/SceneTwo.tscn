@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="SceneTwo" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+color = Color( 0.305882, 0.145098, 0.45098, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 475.0
+margin_top = 293.0
+margin_right = 549.0
+margin_bottom = 307.0
+text = "SCENE TWO"

@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/RobotoSlab-VariableFont_wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/SceneManager.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/TransitionScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Main_Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/magic space.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Assets/unmute_0.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.490196 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.686275 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0509804, 0.0509804, 0.0509804, 0.392157 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="SceneManager" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CurrentScene" type="Node2D" parent="."]
+
+[node name="Main_Menu" parent="CurrentScene" instance=ExtResource( 4 )]
+layer = 2
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 3 )]
+
+[node name="MuteAudio" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="TextureButton" type="TextureButton" parent="MuteAudio"]
+margin_left = 938.0
+margin_top = 21.0
+margin_right = 1002.0
+margin_bottom = 85.0
+texture_normal = ExtResource( 6 )
+
+[node name="MuteButton" type="Button" parent="MuteAudio"]
+visible = false
+margin_left = 83.0
+margin_top = 20.0
+margin_right = 234.0
+margin_bottom = 87.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "UNMUTED"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="pressed" from="CurrentScene/Main_Menu/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="CurrentScene/Main_Menu/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]
+[connection signal="pressed" from="MuteAudio/TextureButton" to="." method="_on_TextureButton_pressed"]
+
+[editable path="CurrentScene/Main_Menu"]

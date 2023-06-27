@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/magic space.mp3-52e7838b5fc6e47e434a7c40a150f247.mp3str"
+
+[deps]
+
+source_file="res://Assets/magic space.mp3"
+dest_files=[ "res://.import/magic space.mp3-52e7838b5fc6e47e434a7c40a150f247.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -8,9 +8,15 @@ signal battle_escaped()
 
 signal abjur_exam_started()
 
+signal abjur_questions_started()
+
 signal evoc_exam_started()
 
+signal evoc_questions_started()
+
 signal transmut_exam_started()
+
+signal transmut_questions_started()
 
 signal abjur_exam_passed()
 

@@ -93,10 +93,15 @@ var questions = [
 func _answers_handler(answer_idx: int, answer: bool):
 	print("answer_num is: " + str(answer_idx) + ", answer is: " + str(answer))
 
+
+func _endline_handler():
+	get_tree().change_scene("res://Scenes/Terrain2.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Starting the dialog")
 	var ref = funcref(self, "_answers_handler")
-	var timeline = dialog.new().create_timeline(questions, characters, ref)
+	var endref = funcref(self, "_endline_handler")
+	var timeline = dialog.new().create_timeline(questions, characters, ref, endref)
 	add_child(timeline)
 	print("Dialog ended")

@@ -15,10 +15,12 @@ class Question:
 var global_questions
 var global_question_idx = 0
 var global_answer_handler
+var global_endline_handler
 var count_true = 0
 
-func create_timeline(questions: Array, characters: Array, answer_handler: FuncRef) -> Dialog:
+func create_timeline(questions: Array, characters: Array, answer_handler: FuncRef, endline_handler: FuncRef) -> Dialog:
 	global_answer_handler = answer_handler
+	global_endline_handler = endline_handler
 	randomize()
 	questions.shuffle()
 	global_questions = questions
@@ -479,6 +481,7 @@ func create_timeline(questions: Array, characters: Array, answer_handler: FuncRe
 		]
 	}
 	timeline.connect("dialogic_signal", self, "dialogic_signal_handler")
+	timeline.connect("timeline_end", self, "dialog_ended")
 	return timeline
 
 
@@ -496,3 +499,8 @@ func dialogic_signal_handler(argument):
 	
 	if count_true >=3 and global_question_idx == 5:
 		print("Συγχαρητήρια!!! Πέρασες το μάθημα!!!")
+
+func dialog_ended(argument):
+	print("Timeline ended" + argument)
+	global_endline_handler.call_func()
+	

@@ -44,11 +44,11 @@ func _on_exam_passed():
 	canHeal = true
 	canDefend = true
 	canCast = true
-	
+
 func _on_exam_failed():
 	canHeal = false
 	canDefend = false
 	canCast = false
-	
+
 func _exit_tree():
 	BattleUnits.PlayerStats = null

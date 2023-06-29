@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/SceneOne.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/SceneManager.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/TransitionScreen.tscn" type="PackedScene" id=3]
+
+[node name="SceneManager" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CurrentScene" type="Node2D" parent="."]
+
+[node name="SceneOne" parent="CurrentScene" instance=ExtResource( 1 )]
+margin_right = 71.0
+margin_bottom = 14.0
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 3 )]
+
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]

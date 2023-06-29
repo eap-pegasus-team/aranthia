@@ -8,6 +8,8 @@ var max_actions = 3
 var ap = max_actions setget set_ap
 var max_mana = 10
 var mp = max_mana setget set_mp
+var def = 0
+var max_def = max_hitpoints
 var canHeal = null
 var canDefend = null
 var canCast = null
@@ -16,7 +18,6 @@ signal hp_changed(value)
 signal ap_changed(value)
 signal mp_changed(value)
 signal end_turn
-
 
 func set_hp(value):
 	hp = clamp(value, 0, max_hitpoints)
@@ -32,9 +33,13 @@ func set_mp(value):
 	mp = clamp(value, 0, max_mana)
 	emit_signal("mp_changed", mp)
 
+func set_def(value):
+	def = clamp(value, 0, max_def)
+	emit_signal("defended", def)
+	
 func _ready():
-	EventHandler.connect("exam_passed", self, "_on_exam_passed")
-	EventHandler.connect("exam_failed", self, "_on_exam_failed")
+#	EventHandler.connect("exam_passed", self, "_on_exam_passed")
+#	EventHandler.connect("exam_failed", self, "_on_exam_failed")
 	canHeal = false
 	canDefend = false
 	canCast = false

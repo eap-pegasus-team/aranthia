@@ -63,6 +63,7 @@ func _on_Building1Area2D_body_entered(body):
 #		get_tree().change_scene("res://AbjurationScene.tscn")
 
 func _on_abjur_exam_started():
+	$AudioStreamPlayer2D.stop()
 	abjur_instance = AbjurClass.instance()
 	$Overlay.visible = true
 	if get_node("Building1Area2D/abjurscene/abjur_scene"):
@@ -70,6 +71,7 @@ func _on_abjur_exam_started():
 	print("Abjur Exame Started")
 
 func _on_abjur_exam_passed():
+	$AudioStreamPlayer2D.play()
 	if get_node("Building1Area2D/abjurscene"):
 		$EnemyOverworld.queue_free()
 	print("Battle Finished")
@@ -78,6 +80,7 @@ func _on_abjur_exam_passed():
 	$Overlay.visible = false
 
 func _on_abjur_exam_failed():
+	$AudioStreamPlayer2D.play()
 	print("Exam Failed")
 	$Player.set_process_unhandled_input(true)
 	var in_area = null
@@ -97,6 +100,7 @@ func _on_Building2Area2D_body_entered(body):
 #		get_tree().change_scene("res://EvocationScene.tscn")
 
 func _on_evoc_exam_started():
+	$AudioStreamPlayer2D.stop()
 	evoc_instance = EvocClass.instance()
 	$Overlay.visible = true
 	if get_node("Building2Area2D/evocscene/evoc_scene"):
@@ -104,6 +108,7 @@ func _on_evoc_exam_started():
 	print("Evoc exam Started")
 
 func _on_evoc_exam_passed():
+	$AudioStreamPlayer2D.play()
 	if get_node("Building2Area2D/evocscene"):
 		$Building2Area2D/evocscene.queue_free()
 	print("Exam Passed")
@@ -112,6 +117,7 @@ func _on_evoc_exam_passed():
 	$Overlay.visible = false
 
 func _on_evoc_exam_failed():
+	$AudioStreamPlayer2D.play()
 	print("Exam Failed")
 	$Player.set_process_unhandled_input(true)
 	var in_area = null
@@ -131,6 +137,7 @@ func _on_Building3Area2D_body_entered(body):
 #		get_tree().change_scene("res://TransmutationScene.tscn")
 
 func _on_transmut_exam_started():
+	$AudioStreamPlayer2D.stop()
 	transmut_instance = TransmutClass.instance()
 	$Overlay.visible = true
 	if get_node("Building3Area2D/transmutscene/transmut_scene"):
@@ -138,6 +145,7 @@ func _on_transmut_exam_started():
 	print("Evoc Exam Started")
 
 func _on_transmut_exam_passed():
+	$AudioStreamPlayer2D.play()
 	if get_node("Building3Area2D/transmutscene"):
 		$Building3Area2D.queue_free()
 	print("Evoc Exam Finished")
@@ -146,6 +154,7 @@ func _on_transmut_exam_passed():
 	$Overlay.visible = false
 
 func _on_transmut_exam_failed():
+	$AudioStreamPlayer2D.play()
 	print("Evoc Exam Failed")
 	$Player.set_process_unhandled_input(true)
 	var in_area = null
@@ -176,7 +185,7 @@ func _on_Building4Area2D_body_entered(body):
 #			$EnemyOverworld/battlescene.add_child(battle_instance)
 
 func _on_battle_started():
-	AudioStreamPlayer.PAUSE_MODE_STOP
+	$AudioStreamPlayer2D.stop()
 	battle_instance = Battle.instance()
 	$Overlay.visible = true
 	if get_node("Building4Area2D/battlescene/battle_scene"):
@@ -184,6 +193,7 @@ func _on_battle_started():
 	print("Battle Started")
 
 func _on_battle_finished():
+	$AudioStreamPlayer2D.play()
 	if get_node("EnemyOverworld/battlescene/Battle"):
 		$EnemyOverworld.queue_free()
 	print("Battle Finished")
@@ -192,7 +202,25 @@ func _on_battle_finished():
 	$Overlay.visible = false
 	
 func _on_battle_escaped():
+	$AudioStreamPlayer2D.play()
 	print("Battle Escaped")
 	$Player.set_process_unhandled_input(true)
 	var in_area = null
 	$Overlay.visible = false
+
+
+func _on_TextureButton_pressed():
+	var master_bus = AudioServer.get_bus_index("Master")
+	var textureA = "res://Assets/mute_0.png"
+	var textureB = "res://Assets/unmute_0.png"
+	
+	if !AudioServer.is_bus_mute(0):
+		print("no mute")
+		get_node("MuteAudio/TextureButton").set_normal_texture(load(textureA))
+		AudioServer.set_bus_mute(master_bus,true)
+	elif AudioServer.is_bus_mute(0):
+		print("mute")
+		get_node("MuteAudio/TextureButton").set_normal_texture(load(textureB))
+		AudioServer.set_bus_mute(master_bus,false)
+	else:
+		print("ERROR")

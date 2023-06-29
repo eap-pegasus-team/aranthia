@@ -29,6 +29,11 @@ func start_enemy_turn():
 	start_player_turn()
 
 func start_player_turn():
+	if $PlayerStats.hp <=0:
+		$UI/TextboxPanel/Textbox.text = "You died!"
+		print("You died!")
+		yield(get_tree().create_timer(2), "timeout")
+		get_tree().change_scene("res://Scenes/SceneManager.tscn")
 	if $PlayerStats.canHeal == false:
 		$UI/BattleActionButtons/HealButton.text == ""
 	battleActionButtons.show()
@@ -105,6 +110,7 @@ func create_new_enemy():
 	enemyPosition.add_child(enemy)
 	
 func _on_Enemy_died():
+	$UI/TextboxPanel/Textbox.text = "You win!"
 	nextRoomButton.show()
 	battleActionButtons.hide()
 	

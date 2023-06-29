@@ -3,11 +3,6 @@ extends KinematicBody2D
 onready var animatedSprite = $AnimatedSprite
 onready var ray = $RayCast2D
 
-var textureback = "res://assets/back_player.png"
-var textureleftA = "res://assets/left_player.png"
-var textureleftB = "res://assets/left_player1.png"
-var texturerightA = "res://assets/right_player.png"
-var texturerightB = "res://assets/right_player1.png"
 var playing = false
 var grid_size = 16
 var inputs = {
@@ -34,8 +29,8 @@ func move(direction):
 		if Input.action_release(direction):
 			animatedSprite.stop()
 	if inputs[direction] == Vector2.DOWN:
-		animatedSprite.animation = "back"
-		animatedSprite.play("back")
+		animatedSprite.animation = "front"
+		animatedSprite.play("front")
 		if Input.action_release(direction):
 			animatedSprite.stop()
 	if inputs[direction] == Vector2.LEFT:

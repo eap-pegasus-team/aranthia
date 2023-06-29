@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Random Battle.mp3-cccdeb4f259a8de17cfe2e7fc4d0065d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Random Battle.mp3"
+dest_files=[ "res://.import/Random Battle.mp3-cccdeb4f259a8de17cfe2e7fc4d0065d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

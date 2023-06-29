@@ -1,0 +1,21 @@
+{
+	"color": "#ff946303",
+	"description": "Professor of Transmutation class",
+	"display_name": "Prof. Stoneward",
+	"display_name_bool": true,
+	"id": "character-1685557732.json",
+	"mirror_portraits": false,
+	"name": "Transmutation Teacher",
+	"nickname": "Professor Elinor Stoneward",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://pics/elinor_stoneward.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}

@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"background": "res://pics/classroom.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684860727.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684860727.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Καλώς ήρθατε, νεαροί. Το όνομά μου είναι Alastair Mulberry και είμαι ο δάσκαλος της σχολής της Αποκήρυξης, εδώ στην Ακαδημία Cloudreign. Καλώς ήρθατε στην τάξη μου. Ας ξεκινήσουμε τη περιπέτειά μας μαζί. "
+		},
+		{
+			"character": "character-1684860727.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Όπως θα πρέπει ήδη να γνωρίζετε, πρωταρχικός στόχος της μαγείας της Αποκήρυξης είναι η προστασία και η άμυνα."
+		},
+		{
+			"character": "character-1684860727.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Η ακρίβεια και η πειθαρχία είναι το κλειδί για έναν ικανό Αποκυρηχτή. Μην το ξεχνάτε ποτέ αυτό. "
+		},
+		{
+			"character": "character-1684860727.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ένας μικρός λανθασμένος υπολογισμός στην επιφώνηση της μαγείας μπορεί να οδηγήσει σε σοβαρές συνέπειες τόσο για τον ασκούντα όσο και για τον στόχο."
+		},
+		{
+			"character": "character-1684860727.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Τώρα... Ας δοκιμάσουμε τις θεμελιώδεις γνώσεις σας."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1684860698.json",
+		"name": "Abjuration Class"
+	}
+}

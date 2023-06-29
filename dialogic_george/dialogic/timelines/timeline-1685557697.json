@@ -1,0 +1,57 @@
+{
+	"events": [
+		{
+			"background": "res://pics/classroom.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1685557725.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1685557725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Καλώς ήρθατε, νεαροί μάγοι και μάγισσες! Είμαι ο Ignatius Fireheart, ο δάσκαλός σας στην περίφημη τέχνη της μαγείας της επίκλησης. "
+		},
+		{
+			"character": "character-1685557725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ετοιμαστείτε να φουντώσουν οι εσωτερικές σας φλόγες και να διοχετεύσετε την ακατέργαστη δύναμη των φυσικών στοιχείων!"
+		},
+		{
+			"character": "character-1685557725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Στην τάξη μου, θα μάθετε να προκαλείτε φλόγες που καίνε τη πλάση, αστραπές που σχίζουν τον ουρανό και χείμαρρους πάγου που εξοντώνουν τους εχθρούς σας.Κάθε πράγμα στο καιρό του. "
+		},
+		{
+			"character": "character-1685557725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ας δούμε αν έχετε αυτό που χρειάζεται..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1685557697.json",
+		"name": "Evocation Class"
+	}
+}
